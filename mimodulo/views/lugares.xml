@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id='action_lugares' model='ir.actions.act_window'>
+        <field name="name">Lugares</field>
+        <field name="res_model">lugares</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Lugares" id="menu_lugares" parent="menu_viajes" action="action_lugares"/>
+
+    <!-- Form View -->
+    <record id='formulario_lugares' model='ir.ui.view'>
+        <field name='name'>Formulario Lugares</field>
+        <field name='model'>lugares</field>
+        <field name='arch' type='xml'>
+            <form>
+                <group>
+                    <group>
+                        <field name='nombre'/>
+                        <field name='pais'/>
+                    </group>
+                    <group>
+                        <field name='imagen' widget='image' class='oe_avatar'/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+<!-- Tree View -->
+    <record id='vista_lugares' model='ir.ui.view'>
+        <field name='name'>Lugares</field>
+        <field name='model'>lugares</field>
+        <field name='arch' type='xml'>
+            <tree>
+            <field name='nombre'/>
+            <field name='pais'/>   
+            </tree>
+        </field>
+    </record> 
+    </odoo>

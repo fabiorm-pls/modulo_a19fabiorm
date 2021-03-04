@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id='action_viajes' model='ir.actions.act_window'>
+        <field name="name">Viajes</field>
+        <field name="res_model">viajes</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Viajes" id="menu_viajes" parent="" action="action_viajes"/>
+
+
+   Form View 
+    <record id='formulario_viajes' model='ir.ui.view'>
+        <field name='name'>Formulario Viajes</field>
+        <field name='model'>viajes</field>
+        <field name='arch' type='xml'>
+            <form>
+                <group>
+                      <field name='titulo'/>              
+                </group>
+                 <group>
+                      <field name='descripcion'/>              
+                </group>
+                 <group>
+                      <field name='lugares'/>              
+                </group>
+                 <group>
+                      <field name='fecha'/>       
+                </group>
+                 <group>
+                      <field name='gastos'/>       
+                </group>
+                               
+            </form>
+        </field>
+    </record>
+
+
+    <record id='vista_viajes' model='ir.ui.view'>
+        <field name='name'>Viajes</field>
+        <field name='model'>viajes</field>
+        <field name='arch' type='xml'>
+            <tree>
+            <field name='titulo'/> 
+            <field name='lugares'/>
+            </tree>
+        </field>
+    </record> 
+</odoo>    

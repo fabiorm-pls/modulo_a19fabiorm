@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_viajes,viajes_default,model_viajes,,1,0,0,0
+acl_viajes_viajeros,viajes_viajeros,model_viajes,group_viajeros,1,1,1,1
+acl_lugares,lugares_default,model_lugares,,1,0,0,0
+acl_lugares_viajeros,lugares_viajeros,model_lugares,group_viajeros,1,1,1,1
