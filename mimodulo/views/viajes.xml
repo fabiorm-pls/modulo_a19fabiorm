@@ -4,13 +4,13 @@
         <field name="name">Viajes</field>
         <field name="res_model">viajes</field>
         <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar</field>
     </record>
 
     <menuitem name="Viajes" id="menu_viajes" parent="" action="action_viajes"/>
 
 
-   Form View 
+ 
     <record id='formulario_viajes' model='ir.ui.view'>
         <field name='name'>Formulario Viajes</field>
         <field name='model'>viajes</field>
@@ -47,4 +47,16 @@
             </tree>
         </field>
     </record> 
+
+<!--Calendar View-->    
+    <record id='vista_viajes_calendar' model='ir.ui.view'>
+        <field name='name'>Viajes Calendar</field>
+        <field name='model'>viajes</field>
+        <field name='arch' type='xml'>
+            <calendar string="Invoices" date_start="fecha">
+                <field name="titulo"/>
+                <field name="lugares"/>
+            </calendar>
+            </field>
+        </record>            
 </odoo>    

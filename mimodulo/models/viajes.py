@@ -5,6 +5,7 @@ from datetime import date, datetime
 
 class Viajes(models.Model):
     _name = "viajes"
+    
 
     titulo = fields.Char("Titulo", required=True)
     descripcion = fields.Text("Descripción")
@@ -19,7 +20,12 @@ class Viajes(models.Model):
 
 class Lugares(models.Model):
     _name = "lugares"
+    _rec_name = "nombre"
+    _inherits ={'res.country.state':'provincia'}
     
-    nombre = fields.Char("Nombre", required=True)
+    nombre = fields.Char('nombre',required=True)
     pais = fields.Many2one('res.country', 'Pais', required=True)
+    provincia = fields.Many2one('res.country.state',string="provincia")
     imagen = fields.Binary("Imagen")
+
+

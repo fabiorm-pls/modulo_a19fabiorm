@@ -19,6 +19,7 @@
                     <group>
                         <field name='nombre'/>
                         <field name='pais'/>
+                        <field name='provincia'/>
                     </group>
                     <group>
                         <field name='imagen' widget='image' class='oe_avatar'/>
